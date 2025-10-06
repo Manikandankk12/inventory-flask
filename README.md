@@ -19,3 +19,6 @@ A simple **Flask-based web application** to manage products, locations, and prod
    ```bash
    git clone https://github.com/YOUR-USERNAME/inventory-flask.git
    cd inventory-flask
+<img width="1920" height="1080" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/7d7f3f14-3efb-42fe-b3fe-7d9043579205" />
+
+<img width="1920" height="1080" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/5f2521f1-acc9-4d71-b995-17599e39263d" />
