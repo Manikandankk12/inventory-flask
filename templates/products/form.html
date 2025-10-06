@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-3 bg-white">
+  <h3>{{ title }}</h3>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+      {{ form.product_id.label }} {{ form.product_id(class="form-control") }}
+    </div>
+    <div class="mb-3">
+      {{ form.name.label }} {{ form.name(class="form-control") }}
+    </div>
+    <button class="btn btn-primary">{{ form.submit.label.text }}</button>
+  </form>
+</div>
+{% endblock %}

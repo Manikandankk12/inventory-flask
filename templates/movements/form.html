@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-3 bg-white">
+  <h3>{{ title }}</h3>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">{{ form.movement_id.label }} {{ form.movement_id(class="form-control") }}</div>
+    <div class="mb-3">{{ form.timestamp.label }} {{ form.timestamp(class="form-control") }} <div class="form-text">Optional. Format: YYYY-mm-dd HH:MM:SS</div></div>
+    <div class="mb-3">{{ form.product_id.label }} {{ form.product_id(class="form-select") }}</div>
+    <div class="mb-3">{{ form.from_location.label }} {{ form.from_location(class="form-select") }}</div>
+    <div class="mb-3">{{ form.to_location.label }} {{ form.to_location(class="form-select") }}</div>
+    <div class="mb-3">{{ form.qty.label }} {{ form.qty(class="form-control") }}</div>
+    <button class="btn btn-primary">{{ form.submit.label.text }}</button>
+  </form>
+</div>
+{% endblock %}

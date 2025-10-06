@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <h2>Product Movements</h2>
+  <a class="btn btn-primary" href="{{ url_for('movement_create') }}">Record Movement</a>
+</div>
+<table class="table bg-white">
+  <thead><tr><th>ID</th><th>Time</th><th>Product</th><th>From</th><th>To</th><th>Qty</th></tr></thead>
+  <tbody>
+    {% for m in movements %}
+      <tr>
+        <td>{{ m.movement_id }}</td>
+        <td>{{ m.timestamp }}</td>
+        <td>{{ m.product_id }}</td>
+        <td>{{ m.from_location or '-' }}</td>
+        <td>{{ m.to_location or '-' }}</td>
+        <td>{{ m.qty }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

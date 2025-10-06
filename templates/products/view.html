@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bg-white p-3 rounded">
+  <h3>Product {{ product.product_id }} — {{ product.name }}</h3>
+  <h5 class="mt-3">Movements</h5>
+  <table class="table">
+    <thead><tr><th>Time</th><th>From</th><th>To</th><th>Qty</th></tr></thead>
+    <tbody>
+      {% for m in movements %}
+        <tr>
+          <td>{{ m.timestamp }}</td>
+          <td>{{ m.from_location or '-' }}</td>
+          <td>{{ m.to_location or '-' }}</td>
+          <td>{{ m.qty }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
